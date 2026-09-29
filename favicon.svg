@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <title>Paperslicer</title>
+  <rect x="0.5" y="0.5" width="31" height="31" rx="6.5" fill="#201929" stroke="#c9a1eb" stroke-opacity="0.35" />
+  <path d="M5 3v18M19 3v18M3 7h18M3 17h18M10 11l4 2-4 2z" transform="translate(4 4)" stroke="#c9a1eb" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+</svg>
