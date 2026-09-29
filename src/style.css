@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+@plugin "daisyui" {
+  themes: false;
+  logs: false;
+}
+
+@plugin "daisyui/theme" {
+  name: "ultraviolet";
+  default: true;
+  prefersdark: true;
+  color-scheme: dark;
+
+  --color-base-100: #201929;
+  --color-base-200: #19131f;
+  --color-base-300: #110d17;
+  --color-base-content: #efe7f7;
+  --color-primary: #9400d3;
+  --color-primary-content: #ffffff;
+  --color-secondary: #c9a1eb;
+  --color-secondary-content: #291336;
+  --color-accent: #92e5cb;
+  --color-accent-content: #10332a;
+  --color-neutral: #352940;
+  --color-neutral-content: #e7dcef;
+  --color-info: #9ac6ff;
+  --color-info-content: #102642;
+  --color-success: #a5ddb1;
+  --color-success-content: #143421;
+  --color-warning: #f7c77a;
+  --color-warning-content: #38260d;
+  --color-error: #f4a0b0;
+  --color-error-content: #421321;
+
+  --radius-selector: 0.25rem;
+  --radius-field: 0.5rem;
+  --radius-box: 1rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 0;
+  --noise: 0;
+}
+
+@layer base {
+  body {
+    min-width: 360px;
+    background-color: var(--color-base-300);
+    background-image: radial-gradient(ellipse at 15% 0%, color-mix(in oklab, var(--color-secondary) 9%, transparent), transparent 45%);
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  button, a {
+    touch-action: manipulation;
+  }
+
+  :focus-visible {
+    outline-color: var(--color-secondary);
+    outline-offset: 3px;
+  }
+}
+
+/* The SVG editors need drafting guides rather than a standard UI component. */
+.drafting-grid {
+  background-color: var(--color-base-300);
+  background-image:
+    linear-gradient(color-mix(in oklab, var(--color-secondary) 7%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in oklab, var(--color-secondary) 7%, transparent) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.draggable-monitor:focus-visible {
+  outline: none;
+}
+
+.draggable-monitor:focus-visible rect {
+  stroke: var(--color-secondary);
+  stroke-width: 3;
+}
+
+.snap-guide {
+  stroke: var(--color-secondary);
+  stroke-width: 1;
+  stroke-dasharray: 4 3;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition-duration: 0s !important;
+    animation-duration: 2s !important;
+  }
+}
